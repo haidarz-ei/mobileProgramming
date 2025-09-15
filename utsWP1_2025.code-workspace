@@ -1,0 +1,34 @@
+{
+	"folders": [
+		{
+			"path": "C:/xampp/htdocs/utsWP1_2025"
+		},
+		{
+			"path": "C:/xampp/htdocs/WP1"
+		},
+		{
+			"path": "C:/xampp/htdocs/kuis-family100"
+		},
+		{
+			"path": "C:/xampp/htdocs/uas"
+		},
+		{
+			"path": "C:/Users/Haidar/OneDrive/ドキュメント/simpanAja/code"
+		},
+		{
+			"path": "C:/xampp/htdocs/simpanAja"
+		},
+		{
+			"path": "C:/xampp/htdocs/DNS"
+		},
+		{
+			"path": "C:/xampp/htdocs/flutter"
+		},
+		{
+			"path": "C:/Users/Haidar/OneDrive/ドキュメント/familyFeud"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "DNS"
+	}
+}

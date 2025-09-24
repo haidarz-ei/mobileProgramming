@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/latihan/Iphone.dart';
-import 'package:flutter_application_1/latihan/baris.dart';
+import 'package:flutter_application_1/latihan/ekspand.dart';
+import 'package:flutter_application_1/latihan/gambar.dart';
 import 'package:flutter_application_1/latihan/kolom.dart';
-import 'package:flutter_application_1/latihan/kontainer.dart';
-import 'package:flutter_application_1/latihan/teks.dart';
-import 'package:flutter_application_1/tugas/layoutFlutter.dart';
+import 'package:flutter_application_1/latihan/layout2.dart';
+import 'package:flutter_application_1/latihan/stack.dart';
+import 'package:flutter_application_1/tugas/layoutFlutter2.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Layoutflutter(), 
+      home: Layoutflutter2(), 
     );
   } 
 }

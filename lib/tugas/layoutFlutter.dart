@@ -20,7 +20,7 @@ class Layoutflutter extends StatelessWidget {
 
                   SizedBox(width: 150),
 
-                  Icon(Icons.search, size: 30, color: const Color.fromARGB(255, 199, 199, 199)),
+                  Icon(Icons.search, size: 30, color: Colors.grey)
                 ],
               ),
             ),
@@ -168,7 +168,8 @@ class Layoutflutter extends StatelessWidget {
                                           borderRadius: BorderRadius.all(Radius.circular(15)),
                                           color: const Color.fromARGB(255, 221, 220, 255),
                                         ),
-                                        child: Text("mobile app")),
+                                        child: Text("mobile app")
+                                      ),
 
                                       SizedBox(width: 5),
 

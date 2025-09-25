@@ -6,7 +6,7 @@ class quiz extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-            appBar: AppBar(
+        appBar: AppBar(
         title: Text("Training"),
       ),
       body: Padding(
@@ -18,14 +18,43 @@ class quiz extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Good morning, ", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-                  Text("Haidar", style: TextStyle(fontSize: 30)),
-
-                  SizedBox(width: 150),
-
+                  Text("Your Program", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                  SizedBox(width: 250),
                   Icon(Icons.search, size: 30, color: Colors.grey)
                 ],
               ),
+            ),
+            
+            SizedBox(height: 15),
+
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 40),
+              width: 400,
+              height: 200,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(15)),
+                  gradient: LinearGradient(
+                    colors: [Colors.purple, Colors.white],
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                    stops: [0.2, 1],
+                  )
+              ),
+                child: Row(
+                  children: [
+                    
+                  ],
+                ),
+            ),
+
+            SizedBox(height: 15),
+
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 40),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(50)),
+                image: DecorationImage(image: AssetImage("assets/img/card.jpg"))
+                ),
             ),
 
             Container(

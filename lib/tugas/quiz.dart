@@ -72,7 +72,29 @@ class quiz extends StatelessWidget {
 
             SizedBox(height: 20),
 
-            Image(image: AssetImage("assets/img/card.jpg")),
+            Stack(
+              children: [
+                Align(
+                  child: Container(
+                    width: 400,
+                    height: 200,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage("assets/img/card.jpg")
+                      )
+                    ),
+                  ),
+                ),
+                Positioned(
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage("assets/img/figure.png"))
+                    ),
+                  ),
+                )
+              ],
+            ),
 
             SizedBox(height: 20),
 

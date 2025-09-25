@@ -20,7 +20,14 @@ class quiz extends StatelessWidget {
                 children: [
                   Text("Your Program", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                   SizedBox(width: 250),
-                  Icon(Icons.search, size: 30, color: Colors.grey)
+                  Container(
+                    child: Row(
+                      children: [
+                        Text("Detail", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                        Icon(Icons.arrow_forward_ios_outlined),
+                      ],
+                    )
+                  )
                 ],
               ),
             ),
@@ -47,29 +54,50 @@ class quiz extends StatelessWidget {
                 ),
             ),
 
-            SizedBox(height: 15),
+            SizedBox(height: 20),
 
             Image(image: AssetImage("assets/img/card.jpg")),
 
-            Container(
-              child: 
-                Text("Area of focus")
-            ),
+            SizedBox(height: 20),
 
             Container(
-              child: Row(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(0)),
-                      color: Colors.blue
-                    ),
-                  ),
-                  Container(
 
-                  )
+                Container(
+                  child: 
+                    Text("Area of focus")
+                ),
+
+                
+                  Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: 200,
+                          height: 200,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                            color: Colors.blue
+                          ),
+                        ),
+                        SizedBox(width: 10,),
+                        Container(
+                          width: 200,
+                          height: 200,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                            color: Colors.blue
+                          ),
+                        )
+                      ],
+                    )
+                  ),
+
+
+
                 ],
               ),
             )

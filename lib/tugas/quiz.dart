@@ -7,8 +7,10 @@ class quiz extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 232, 232, 232),
       body: ListView(
         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 50),
+        
           children: [
             Container(
               child: Row(
@@ -93,29 +95,30 @@ class quiz extends StatelessWidget {
               ),
             ),
                 
-            SizedBox(height: 10),
+            
 
-
-              Stack(
-                children: [
-                  Align(
-                    child: ClipRect(
-                      
+            Stack(
+              children: [
+                Align(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(30),
+                    child: Image.asset("assets/img/card.jpg", width: 400, height: 150, 
                     ),
                   ),
-                  Positioned(
-                    top: 20,
-                    left: 20,
-                    child: Container(
-                      width: 85,
-                      height: 85,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(image: AssetImage("assets/img/figure.png"))
-                      ),
-                    ), 
-                  ),
-                ],
-              ),
+                ),
+                Positioned(
+                  top: 20,
+                  left: 20,
+                  child: Container(
+                    width: 85,
+                    height: 85,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage("assets/img/figure.png"))
+                    ),
+                  ), 
+                ),
+              ],
+            ),
             
 
             SizedBox(height: 1),

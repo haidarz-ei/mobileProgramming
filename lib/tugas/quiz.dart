@@ -41,7 +41,7 @@ class quiz extends StatelessWidget {
                     child: Row(
                       children: [
                         Text("Details", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.blueAccent)),
-                        Icon(Icons.arrow_forward_ios, color: Colors.blue,),
+                        Icon(Icons.arrow_forward_ios, color: Colors.blueAccent,),
                       ],
                     )
                   )
@@ -108,13 +108,20 @@ class quiz extends StatelessWidget {
                   ),
                 ),
 
-                Container(
-                  child: Column(
-                    children: [
-                      Text("You are Doing Great"),
-                      Text("Keep it up \nstick to your plan"),
-                    ],
-                  ) 
+                Positioned(
+                  top: 17,
+                  left: 180,
+                  child: Container(
+                    width: 150,
+                    height: 70,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("You are Doing Great", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent, fontSize: 15),),
+                        Text("Keep it up \nstick to your plan"),
+                      ],
+                    ) 
+                  ),
                 ),
 
                 Positioned(
@@ -132,7 +139,7 @@ class quiz extends StatelessWidget {
             ),
             
 
-            SizedBox(height: 1),
+            SizedBox(height: 30),
 
             Container(
               child: Column(
@@ -140,66 +147,65 @@ class quiz extends StatelessWidget {
                 children: [
 
                 Align(
-                  alignment: Alignment(-0.9,1),
+                  alignment: Alignment(-1,1),
                   child: 
                     Text("Area of focus", style: TextStyle(fontSize: 20),)
                 ),
 
-                
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: 200,
-                          height: 200,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(20)),
-                            color: Colors.blue
-                          ),
-                          child: Stack(
-                            children: [
-                              Align(
-                                alignment: Alignment(0,0.5),
-                                child: Container(
-                                  width: 250,
-                                  height: 280,
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(image: AssetImage("assets/img/ex3.png")
-                                    )
-                                  ),
-                                ),
-                              ),
-                            ]
-                          ),
+                Container(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 200,
+                        height: 170,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          color: Colors.white
                         ),
-                        SizedBox(width: 10,),
-                        Container(
-                          width: 200,
-                          height: 200,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(20)),
-                            color: Colors.blue
-                          ),
-                          child: Stack(
-                            children: [
-                              Align(
-                                alignment: Alignment(0,0.5),
-                                child: Container(
-                                  width: 250,
-                                  height: 280,
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(image: AssetImage("assets/img/ex4.png")
-                                    )
-                                  ),
+                        child: Stack(
+                          children: [
+                            Align(
+                              alignment: Alignment(0,0.5),
+                              child: Container(
+                                width: 250,
+                                height: 280,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(image: AssetImage("assets/img/ex3.png")
+                                  )
                                 ),
                               ),
-                            ]
-                          ),
-                        )
-                      ],
-                    )
-                  ),
+                            ),
+                          ]
+                        ),
+                      ),
+                      SizedBox(width: 10,),
+                      Container(
+                        width: 200,
+                        height: 170,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          color: Colors.white
+                        ),
+                        child: Stack(
+                          children: [
+                            Align(
+                              alignment: Alignment(0,0.5),
+                              child: Container(
+                                width: 250,
+                                height: 280,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(image: AssetImage("assets/img/ex4.png")
+                                  )
+                                ),
+                              ),
+                            ),
+                          ]
+                        ),
+                      )
+                    ],
+                  )
+                ),
 
 
 

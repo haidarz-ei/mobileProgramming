@@ -160,6 +160,7 @@ class quiz extends StatelessWidget {
                       Container(
                         child: Row(
                           children: [
+                            
                             Stack(
                               children: [
                                 Container(
@@ -169,22 +170,18 @@ class quiz extends StatelessWidget {
                                     borderRadius: BorderRadius.all(Radius.circular(20)),
                                     color: const Color.fromARGB(255, 145, 49, 49)
                                   ),
-                                ),
-                                Container(
-                                  width: 170,
-                                  height: 160,
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(image: AssetImage("assets/img/ex3.png"), 
-                                    fit: BoxFit.fill),
-                                    borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(30),
-                                      topRight: Radius.circular(30),
-                                      bottomLeft: Radius.circular(30),
-                                      
-
-                                    )
+                                  child: Align(
+                                    child: Container(
+                                    width: 170,
+                                    height: 160,
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(image: AssetImage("assets/img/ex3.png"), 
+                                      fit: BoxFit.fill),
+                                      borderRadius: BorderRadius.circular(40)
+                                    ),
                                   ),
-                                )
+                                  ),
+                                ),
                               ],
                             )
                           ],

@@ -7,9 +7,9 @@ class quiz extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 232, 232, 232),
+      backgroundColor: const Color.fromARGB(255, 234, 234, 234),
       body: ListView(
-        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 50),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
         
           children: [
             Container(
@@ -76,7 +76,7 @@ class quiz extends StatelessWidget {
                   Text("Next Workout", style: TextStyle(fontSize: 15, color: Colors.white)),
                   Text("Lets Toning \nand Glutes Workout", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24, color: Colors.white)),
                   
-                  SizedBox(height: 45,),
+                  SizedBox(height: 46),
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween, // ✅ BENAR
@@ -152,6 +152,8 @@ class quiz extends StatelessWidget {
                     Text("Area of Focus", style: TextStyle(fontSize: 20),)
                 ),
 
+                SizedBox(height: 10,),
+
                 Container(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -164,11 +166,11 @@ class quiz extends StatelessWidget {
                             Stack(
                               children: [
                                 Container(
-                                  width: 200,
+                                  width: 220,
                                   height: 170,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.all(Radius.circular(20)),
-                                    color: const Color.fromARGB(255, 145, 49, 49)
+                                    color: const Color.fromARGB(255, 255, 255, 255)
                                   ),
                                   child: Align(
                                     child: Container(
@@ -183,37 +185,39 @@ class quiz extends StatelessWidget {
                                   ),
                                 ),
                               ],
+                            ),
+
+                            SizedBox(width: 10),
+
+                            Stack(
+                              children: [
+                                Container(
+                                  width: 220,
+                                  height: 170,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                                    color: const Color.fromARGB(255, 255, 255, 255)
+                                  ),
+                                  child: Align(
+                                    child: Container(
+                                    width: 170,
+                                    height: 160,
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(image: AssetImage("assets/img/ex4.png"), 
+                                      fit: BoxFit.fill),
+                                      borderRadius: BorderRadius.circular(40)
+                                    ),
+                                  ),
+                                  ),
+                                ),
+                              ],
                             )
+                            
                           ],
                         ),
                       ),
                           
 
-                      SizedBox(width: 10,),
-
-                      Container(
-                        width: 200,
-                        height: 170,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                          color: Colors.white
-                        ),
-                        child: Stack(
-                          children: [
-                            Align(
-                              alignment: Alignment(0,0.5),
-                              child: Container(
-                                width: 250,
-                                height: 280,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(image: AssetImage("assets/img/ex4.png")
-                                  )
-                                ),
-                              ),
-                            ),
-                          ]
-                        ),
-                      )
                     ],
                   )
                 ),

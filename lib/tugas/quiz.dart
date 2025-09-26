@@ -95,23 +95,34 @@ class quiz extends StatelessWidget {
               ),
             ),
                 
-            
+            SizedBox(height: 30,),
 
             Stack(
+              clipBehavior: Clip.none, // biar widget di dalem stack bisa keluar batas stack
               children: [
                 Align(
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(30),
-                    child: Image.asset("assets/img/card.jpg", width: 400, height: 150, 
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset("assets/img/card.jpg", width: 500, height: 100, fit: BoxFit.fill 
                     ),
                   ),
                 ),
+
+                Container(
+                  child: Column(
+                    children: [
+                      Text("You are Doing Great"),
+                      Text("Keep it up \nstick to your plan"),
+                    ],
+                  ) 
+                ),
+
                 Positioned(
-                  top: 20,
-                  left: 20,
+                  top: -24,
+                  left: 4,
                   child: Container(
-                    width: 85,
-                    height: 85,
+                    width: 95,
+                    height: 95,
                     decoration: BoxDecoration(
                       image: DecorationImage(image: AssetImage("assets/img/figure.png"))
                     ),

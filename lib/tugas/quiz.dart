@@ -50,37 +50,44 @@ class quiz extends StatelessWidget {
             SizedBox(height: 15),
 
             Container(
-              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+              padding: EdgeInsets.symmetric(vertical: 15, horizontal: 22),
               width: 400,
               height: 200,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(15)),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20),
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
+                  topRight: Radius.circular(150),
+                  ),
                   gradient: LinearGradient(
-                    colors: [Colors.purple, Colors.white],
-                    begin: Alignment.centerLeft,
+                    colors: [const Color.fromARGB(255, 174, 44, 197), Colors.purple.shade100],
+                    begin: Alignment.bottomLeft,
                     end: Alignment.topRight,
-                    stops: [0.4, 1],
+                    stops: [0.5, 1],
                   )
               ),
+
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text("Next Workout", style: TextStyle(fontSize: 15, color: Colors.white)),
-                  Text("Lets Toning \nand Glutes Workout", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white)),
+                  Text("Lets Toning \nand Glutes Workout", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24, color: Colors.white)),
                   
-                  SizedBox(height: 50,),
+                  SizedBox(height: 45,),
 
-                  Container(
-                    child: Row(
-                      children: [
-                        Row(children: [
-                          Icon(Icons.timer, color: Colors.white)),
-                          Text("60 min", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white)),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween, // ✅ BENAR
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.timer, color: Colors.white, size: 20,),
+                          SizedBox(width: 5),
+                          Text("60 min", style: TextStyle(fontSize: 15, color: Colors.white)),
+                        ],
                       ),
-                        ),
-                      ],
-                      Icon(Icons.play_circle_filled, color: Colors.white,)
-                    )
+                      Icon(Icons.play_circle_filled, color: Colors.white, size: 35,),
+                    ],
                   )
                 ],
               ),

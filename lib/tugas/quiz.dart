@@ -60,7 +60,7 @@ class quiz extends StatelessWidget {
                   topLeft: Radius.circular(20),
                   bottomLeft: Radius.circular(20),
                   bottomRight: Radius.circular(20),
-                  topRight: Radius.circular(150),
+                  topRight: Radius.circular(130),
                   ),
                   gradient: LinearGradient(
                     colors: [const Color.fromARGB(255, 174, 44, 197), Colors.purple.shade100],
@@ -118,7 +118,7 @@ class quiz extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text("You are Doing Great", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent, fontSize: 15),),
-                        Text("Keep it up \nstick to your plan"),
+                        Text("Keep it up \nstick to your plan", style: TextStyle(color: Colors.blueGrey),),
                       ],
                     ) 
                   ),
@@ -149,37 +149,51 @@ class quiz extends StatelessWidget {
                 Align(
                   alignment: Alignment(-1,1),
                   child: 
-                    Text("Area of focus", style: TextStyle(fontSize: 20),)
+                    Text("Area of Focus", style: TextStyle(fontSize: 20),)
                 ),
 
                 Container(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+
                       Container(
-                        width: 200,
-                        height: 170,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                          color: Colors.white
-                        ),
-                        child: Stack(
+                        child: Row(
                           children: [
-                            Align(
-                              alignment: Alignment(0,0.5),
-                              child: Container(
-                                width: 250,
-                                height: 280,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(image: AssetImage("assets/img/ex3.png")
-                                  )
+                            Stack(
+                              children: [
+                                Container(
+                                  width: 200,
+                                  height: 170,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                                    color: const Color.fromARGB(255, 145, 49, 49)
+                                  ),
                                 ),
-                              ),
-                            ),
-                          ]
+                                Container(
+                                  width: 170,
+                                  height: 160,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(image: AssetImage("assets/img/ex3.png"), 
+                                    fit: BoxFit.fill),
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(30),
+                                      topRight: Radius.circular(30),
+                                      bottomLeft: Radius.circular(30),
+                                      
+
+                                    )
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
                         ),
                       ),
+                          
+
                       SizedBox(width: 10,),
+
                       Container(
                         width: 200,
                         height: 170,

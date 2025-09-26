@@ -8,13 +8,13 @@ class quiz extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        padding: const EdgeInsets.symmetric(vertical: 30),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 50),
           children: [
             Container(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Training", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                  Text("Training", style: TextStyle(fontSize: 20)),
                   Container(
                     child: Row(
                       children: [
@@ -28,17 +28,18 @@ class quiz extends StatelessWidget {
               ),
             ),
 
+            SizedBox(height: 50),
+
             Container(
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Your Program", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                  SizedBox(width: 250),
+                  Text("Your Program", style: TextStyle(fontSize: 20)),
                   Container(
                     child: Row(
                       children: [
-                        Text("Detail", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.blueAccent)),
-                        Icon(Icons.arrow_forward_ios_outlined, color: Colors.blue,),
+                        Text("Details", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.blueAccent)),
+                        Icon(Icons.arrow_forward_ios, color: Colors.blue,),
                       ],
                     )
                   )
@@ -48,45 +49,44 @@ class quiz extends StatelessWidget {
             
             SizedBox(height: 15),
 
-            SizedBox(
-              height: 400,
-              child: Stack(
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+              width: 400,
+              height: 200,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(15)),
+                  gradient: LinearGradient(
+                    colors: [Colors.purple, Colors.white],
+                    begin: Alignment.centerLeft,
+                    end: Alignment.topRight,
+                    stops: [0.4, 1],
+                  )
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
+                  Text("Next Workout", style: TextStyle(fontSize: 15, color: Colors.white)),
+                  Text("Lets Toning \nand Glutes Workout", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white)),
                   
+                  SizedBox(height: 50,),
+
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 40),
-                    width: 400,
-                    height: 200,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(15)),
-                        gradient: LinearGradient(
-                          colors: [Colors.purple, Colors.white],
-                          begin: Alignment.centerLeft,
-                          end: Alignment.centerRight,
-                          stops: [0.2, 1],
-                        )
-                    ),
-                      child: Column(
-                        children: [
-                          Text("Next Workout", style: TextStyle(fontSize: 15, color: Colors.white)),
-                          Text("Lets Toning \nand Glutes Workout", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white)),
-                          Container(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text("60 min", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white)),
-                                SizedBox(width: 300),
-                                Icon(Icons.play_arrow_sharp)
-                              ],
-                            ))
-                        ],
+                    child: Row(
+                      children: [
+                        Row(children: [
+                          Icon(Icons.timer, color: Colors.white)),
+                          Text("60 min", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white)),
                       ),
-                  ),
-                
-                ]
+                        ),
+                      ],
+                      Icon(Icons.play_circle_filled, color: Colors.white,)
+                    )
+                  )
+                ],
               ),
             ),
+                
+     
       
 
             SizedBox(height: 1),

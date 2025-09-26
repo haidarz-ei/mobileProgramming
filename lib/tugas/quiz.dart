@@ -14,7 +14,7 @@ class quiz extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Training", style: TextStyle(fontSize: 20)),
+                  Text("Training", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                   Container(
                     child: Row(
                       children: [
@@ -34,7 +34,7 @@ class quiz extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Your Program", style: TextStyle(fontSize: 20)),
+                  Text("Your Program", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                   Container(
                     child: Row(
                       children: [
@@ -93,36 +93,30 @@ class quiz extends StatelessWidget {
               ),
             ),
                 
-     
-      
+            SizedBox(height: 10),
 
-            SizedBox(height: 1),
 
-            Stack(
-              children: [
-                Align(
-                  child: Container(
-                    width: 400,
-                    height: 150,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(image: AssetImage("assets/img/card.jpg")
-                      )
+              Stack(
+                children: [
+                  Align(
+                    child: ClipRect(
+                      
                     ),
                   ),
-                ),
-                Positioned(
-                  top: 10,
-                  left: 65,
-                  child: Container(
-                    width: 85,
-                    height: 85,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(image: AssetImage("assets/img/figure.png"))
-                    ),
-                  ), 
-                ),
-              ],
-            ),
+                  Positioned(
+                    top: 20,
+                    left: 20,
+                    child: Container(
+                      width: 85,
+                      height: 85,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(image: AssetImage("assets/img/figure.png"))
+                      ),
+                    ), 
+                  ),
+                ],
+              ),
+            
 
             SizedBox(height: 1),
 
@@ -132,7 +126,7 @@ class quiz extends StatelessWidget {
                 children: [
 
                 Align(
-                  alignment: Alignment(-0.7,1),
+                  alignment: Alignment(-0.9,1),
                   child: 
                     Text("Area of focus", style: TextStyle(fontSize: 20),)
                 ),

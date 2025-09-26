@@ -7,14 +7,26 @@ class quiz extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: 
-          Text("Training"),
-      ),
-      body: Padding(
+      body: ListView(
         padding: const EdgeInsets.symmetric(vertical: 30),
-        child: Column(
           children: [
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Training", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                  Container(
+                    child: Row(
+                      children: [
+                        Icon(Icons.arrow_back_ios_outlined),
+                        Icon(Icons.calendar_today),
+                        Icon(Icons.arrow_forward_ios_outlined)
+                      ]
+                    )
+                  )
+                ],
+              ),
+            ),
 
             Container(
               child: Row(
@@ -36,48 +48,55 @@ class quiz extends StatelessWidget {
             
             SizedBox(height: 15),
 
-            Positioned(
-              top: 235,
-              
-              child: Container(
-                padding: EdgeInsets.symmetric(vertical: 40),
-                width: 400,
-                height: 200,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(15)),
-                    gradient: LinearGradient(
-                      colors: [Colors.purple, Colors.white],
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                      stops: [0.2, 1],
-                    )
-                ),
-                  child: Column(
-                    children: [
-                      Text("Next Workout", style: TextStyle(fontSize: 15, color: Colors.white)),
-                      Text("Lets Toning \nand Glutes Workout", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white)),
-                      Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text("60 min", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white)),
-                            SizedBox(width: 300),
-                            Icon(Icons.arrow_forward_ios_outlined)
-                          ],
-                        ))
-                    ],
+            SizedBox(
+              height: 400,
+              child: Stack(
+                children: [
+
+                  
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: 40),
+                    width: 400,
+                    height: 200,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                        gradient: LinearGradient(
+                          colors: [Colors.purple, Colors.white],
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                          stops: [0.2, 1],
+                        )
+                    ),
+                      child: Column(
+                        children: [
+                          Text("Next Workout", style: TextStyle(fontSize: 15, color: Colors.white)),
+                          Text("Lets Toning \nand Glutes Workout", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white)),
+                          Container(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text("60 min", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white)),
+                                SizedBox(width: 300),
+                                Icon(Icons.play_arrow_sharp)
+                              ],
+                            ))
+                        ],
+                      ),
                   ),
+                
+                ]
               ),
             ),
+      
 
-            SizedBox(height: 20),
+            SizedBox(height: 1),
 
             Stack(
               children: [
                 Align(
                   child: Container(
                     width: 400,
-                    height: 200,
+                    height: 150,
                     decoration: BoxDecoration(
                       image: DecorationImage(image: AssetImage("assets/img/card.jpg")
                       )
@@ -85,18 +104,20 @@ class quiz extends StatelessWidget {
                   ),
                 ),
                 Positioned(
+                  top: 10,
+                  left: 65,
                   child: Container(
-                    width: 100,
-                    height: 100,
+                    width: 85,
+                    height: 85,
                     decoration: BoxDecoration(
                       image: DecorationImage(image: AssetImage("assets/img/figure.png"))
                     ),
-                  ),
-                )
+                  ), 
+                ),
               ],
             ),
 
-            SizedBox(height: 20),
+            SizedBox(height: 1),
 
             Container(
               child: Column(
@@ -175,8 +196,7 @@ class quiz extends StatelessWidget {
             
           ],
         ),
-      ),
-    );
+      );
   }
 }
 

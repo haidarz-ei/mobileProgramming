@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/latihan/stack.dart';
+import 'package:flutter_application_1/tugas/layoutFlutter2.dart';
 
 class quiz extends StatelessWidget {
   const quiz({super.key});
@@ -30,14 +31,27 @@ class quiz extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 50),
+            SizedBox(height: 35),
 
             Container(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("Your Program", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                  Container(
+                  
+                  // Container(
+
+                  // GestureDetector(onTap: () {      // GestureDetector: Pake kalo mau bikin apa aja (misal gambar/teks) bisa diklik, tapi kita atur sendiri tampilannya.
+
+                  // ElevatedButton(onPressed: () {   // ElevatedButton: Pake buat tombol yang kelihatan gede, ada bayangan, buat aksi penting kayak "Simpan".
+
+                  TextButton(onPressed: () {          // TextButton: Pake buat tombol sederhana kayak link "Lihat detail", cuma teks/ikon, ga berat.
+                                    
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => Layoutflutter2()), 
+                      );
+                    },
+
                     child: Row(
                       children: [
                         Text("Details", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.blueAccent)),
@@ -88,7 +102,19 @@ class quiz extends StatelessWidget {
                           Text("60 min", style: TextStyle(fontSize: 15, color: Colors.white)),
                         ],
                       ),
-                      Icon(Icons.play_circle_filled, color: Colors.white, size: 35,),
+
+                      // agar ikon play ditengah bisa di beri warna, bisa pakai Stack
+                       
+                      // Icon(Icons.play_circle_filled, color: Colors.white, size: 35,),
+                      
+                      Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          Icon(Icons.play_circle_filled, color: Colors.white, size: 35),
+                          Icon(Icons.play_arrow, color: Colors.purple, size: 20),
+                        ],
+                      ),
+
                     ],
                   )
                 ],

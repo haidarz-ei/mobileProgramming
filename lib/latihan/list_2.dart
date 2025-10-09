@@ -9,19 +9,15 @@ class List2 extends StatelessWidget {
       appBar: AppBar(
         title: Text("Latihan Layout"),
       ),
-      body: Column(
+      body: ListView(
+        scrollDirection: Axis.vertical,
+        padding: EdgeInsets.all(10),
         children: [
-          Container(
-            height: 400,
-            decoration: BoxDecoration(
-              color: Colors.red,
-            ), 
-          ),
-          Container(
-            height: 400,
-            decoration: BoxDecoration(
-              color: Colors.blue,
-            ), 
+          ListTile(
+            title: Text("Muslihat"),
+            subtitle: Text("Manager"),
+            leading: Icon(Icons.person),
+            hoverColor: Colors.amber,
           ),
         ],
       ),

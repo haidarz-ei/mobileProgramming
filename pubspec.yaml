@@ -64,15 +64,19 @@ flutter:
 
   assets:
     - assets/img/seal.png
-    - assets/img/wp.jpg
     - assets/img/masjid.png
     - assets/img/muslimChild.png
     - assets/img/mobile.png
     - assets/img/mobile2.png
     - assets/img/ex4.png
     - assets/img/ex3.png
-    - assets/img/card.jpg
     - assets/img/figure.png
+    - assets/img/3dDumble.png
+
+    - assets/img/wp.jpg
+    - assets/img/card.jpg
+    - assets/img/leaf.jpg
+    - assets/img/gym.jpg
 
     - assets/fonts/
 

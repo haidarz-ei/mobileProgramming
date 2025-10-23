@@ -46,13 +46,11 @@ class quiz extends StatelessWidget {
         
                     // ElevatedButton(onPressed: () {   // ElevatedButton: Pake buat tombol yang kelihatan gede, ada bayangan, buat aksi penting kayak "Simpan".
         
-                    TextButton(onPressed: () {          // TextButton: Pake buat tombol sederhana kayak link "Lihat detail", cuma teks/ikon, ga berat.
-                                      
+                    TextButton(onPressed: () {          // TextButton: Pake buat tombol sederhana kayak link "Lihat detail", cuma teks/ikon, ga berat.           
                         Navigator.push(
                           context, MaterialPageRoute(builder: (context) => Layoutflutter2()), 
                         );
                       },
-        
                       child: Row(
                         children: [
                           Text("Details", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.blueAccent)),
@@ -60,6 +58,7 @@ class quiz extends StatelessWidget {
                         ],
                       )
                     )
+                    
                   ],
                 ),
               ),

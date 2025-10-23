@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/latihan/pages/page2.dart';
 
+// void main() {
+//   runApp(const MaterialApp(
+//     home: page1(), // sama kayak nama class di bawah
+//   ));
+// }
+
 class page1 extends StatelessWidget {
   const page1({super.key});
 

@@ -30,7 +30,9 @@ class List3 extends StatelessWidget {
             child: Container(
               height: 100,
               decoration: BoxDecoration(
-                color: mhs[index]["usia"] < 16 ? Colors.amber : Colors.red,
+                color: mhs[index]["usia"] < 16 
+                  ? Colors.amber 
+                  : Colors.red,
                 borderRadius: BorderRadius.all(Radius.circular(20))
               ),
               child: ListTile(

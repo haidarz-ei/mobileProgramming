@@ -17,6 +17,8 @@ import 'package:flutter_application_1/latihan/stack.dart';
 import 'package:flutter_application_1/latihan/list_1.dart';
 import 'package:flutter_application_1/latihan/list_2.dart';
 import 'package:flutter_application_1/latihan/list_3.dart';
+import 'package:flutter_application_1/latihan/text_box.dart';
+import 'package:flutter_application_1/latihan/text_box2.dart';
 
 // tugas
 import 'package:flutter_application_1/tugas/layoutFlutter2.dart';
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: List3(), 
+      home: TextBoxPage2(),
 
       // routes: {
       //  "/" : (context)=>page1(),
